@@ -1,0 +1,16 @@
+.logo {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.banner {
+    width: 100%;
+    height: fit-content;
+}
+
+.contacts {
+    float: right;
+    width: 80px;
+}
+
