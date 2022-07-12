@@ -7,10 +7,62 @@
 .banner {
     width: 100%;
     height: fit-content;
+    border-radius: 5%;
 }
 
-.contacts {
+.facebook-logo {
+    float: inline-end;
+    width: 45px;
+    display: inline;
+    padding-left: 3px;
+    
+}
+
+.instagram-logo {
     float: right;
-    width: 80px;
+    width: 45px;
+    display: inline;
+    padding-left: 3px;
+    
 }
 
+.twitter-logo {
+    float: inline-end;
+    width: 45px;
+    display: inline;
+
+}
+
+.login {
+    float: inline-end;
+    margin-top: -5px;
+
+}
+
+.profile {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin-left: 50px;
+    margin-top: -50px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+p {
+    font-family: Arial;
+}
+
+li, h1, h2 {
+    font-family: Arial;
+}
+
+h1 {
+    margin-top: -5px;
+}
