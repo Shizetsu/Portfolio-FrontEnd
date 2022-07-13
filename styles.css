@@ -59,10 +59,20 @@ p {
     font-family: Arial;
 }
 
-li, h1, h2 {
+li, h1, h2, h3 {
     font-family: Arial;
 }
 
 h1 {
     margin-top: -5px;
 }
+
+h3 {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+
+  }
+
