@@ -35,8 +35,8 @@
 
 .login {
     float: inline-end;
-    margin-top: -5px;
-
+    margin-top: 45px;
+    margin-right: -130px
 }
 
 .profile {
@@ -77,3 +77,12 @@ html {
 
   }
 
+.logos {
+    width: 520px;
+    height: 200px;
+}
+
+.bootstrap-logo {
+    width: 100px;
+    height: 80px
+}
