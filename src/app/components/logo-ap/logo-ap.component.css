@@ -1,3 +1,55 @@
 #logoAP{
     width: 150px;
 }
+
+
+
+.linkedin-logo{
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+
+.github-logo{
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+
+.instagram-logo{
+    width: 45px;
+    height: 45px;
+}
+
+div button  {
+    margin:5px;
+    
+}
+
+
+.btn-login {
+    padding: 10px 50px;
+    border-radius: 30px;
+    font-weight: 900; 
+    font-family: 'IBM Plex Mono', monospace;
+    
+}
+
+.btn-login{
+    background-color: #3a3d40;
+    color: white;
+}
+.btn-login:hover{
+    -webkit-box-shadow: 0px 0px 12px 4px var(--azulcito); 
+    box-shadow: 0px 0px 12px 4px var(--azulcito);
+}
+
+.btn-login:hover{
+    text-shadow: 0px 0px 9px var(--azulcito);
+}
+
+.nav-item {
+font-size: 15px;
+font-family: 'IBM Plex Mono', monospace;
+font-weight: bold;
+}
