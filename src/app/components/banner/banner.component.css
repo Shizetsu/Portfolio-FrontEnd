@@ -4,7 +4,7 @@
     height: 100vh;
     background-size: cover;
     box-sizing: border-box;
-    filter: blur(4px);
+    filter: blur(4px);    
 }
 
 .home {
@@ -29,7 +29,7 @@ div h1 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 32ch;
+    width: 100%;
 
     animation: typing 4s steps(32),
     blink .4s infinite step-end alternate;
