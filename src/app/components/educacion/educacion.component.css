@@ -2,9 +2,23 @@
     padding: 20px;
 }
 div{
-    background: #a1b5cb;
+    background: white;
 }
 
 h1, h3{
     display: inline;
+}
+
+.zipoli-logo{
+    width: 100px;
+    margin-left: 20px;
+}
+
+.upc-logo{
+    width: 180px;
+    margin-left: -20px;
+}
+
+.titulo{
+    text-align: center;
 }
