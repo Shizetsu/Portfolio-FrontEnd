@@ -12,13 +12,15 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { EnglishComponent } from './components/english/english.component';
 
 const appRoutes:Routes=[
   {path:'projects', component:ProyectoComponent},
   {path:'about', component:AcercaDeComponent},
   {path:'experience', component:ExperienciaComponent},
   {path:'educacion', component:EducacionComponent},
-  {path:'skills', component:SkillsComponent}
+  {path:'skills', component:SkillsComponent},
 
 ];
 
@@ -35,6 +37,8 @@ const appRoutes:Routes=[
     SkillsComponent,
     ProyectoComponent,
     FooterComponent,
+    HomeComponent,
+    EnglishComponent,
   ],
   imports: [
     BrowserModule,
