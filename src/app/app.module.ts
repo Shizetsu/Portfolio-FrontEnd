@@ -14,6 +14,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { EnglishComponent } from './components/english/english.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 const appRoutes:Routes=[
   {path:'projects', component:ProyectoComponent},
@@ -43,7 +46,9 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
