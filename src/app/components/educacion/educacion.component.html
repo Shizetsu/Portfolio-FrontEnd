@@ -1,4 +1,11 @@
 <h1 class="titulo">Educación</h1>
+<div class="boton-añadir">
+    <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
+    <a class="nav-link" style="color:aliceblue">
+    añadir educación<span class="sr-only"> (current) </span>
+    </a>
+</button>
+</div>
 <div class="row" id="educacion" *ngFor="let education of educations">
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
@@ -6,14 +13,18 @@
             <img class="zipoli-logo" src={{education.imagenEdu}} alt="zipoli-logo">
             <li>
                 <a href={{education.tituloURL}} target="_blank"><h1 class="tituloEdu">{{education.tituloEdu}}</h1></a> - <h3 class="tituloEdu">{{education.fechaEdu}}-{{education.fechaFin}}</h3>
-                <a class="btn btn-primary tooltips"
+                <a 
+                    (click)="onOpenModal('edit',education)"
+                    class="btn btn-primary tooltips"
                     data-placement="top"
                     data-toggle="tooltip"
                     data-original-title="Edit">
                     <i class="fa fa-pencil"></i>
 
                 </a>
-                <a class="btn btn-secondary tooltips"
+                <a 
+                (click)="onOpenModal('delete',education)"
+                class="btn btn-secondary tooltips"
                 data-placement="top"
                 data-toggle="tooltip"
                 data-original-title="Delete">
@@ -27,3 +38,158 @@
         </ul>
     </div>
 </div>
+
+<!-- Modal añadir education -->
+<div class="modal fade" id="addEducationModal" tabindex="-1" role="dialog" aria-labelledby="addEducationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEducationModal"> Añadir educación</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="close"
+          >
+            <span aria-hidden="true"> &times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #addForm="ngForm" (ngSubmit)="onAddEducation(addForm)">
+            <div class="form-group">
+              <label for="tituloEdu"> Título</label>
+              <input type="text"
+                ngModel
+                name="tituloEdu"
+                class="form-control"
+                id="tituloEdu"
+                placeholder="Titulo"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="tituloURL"> URL</label>
+              <input type="text"
+                ngModel
+                name="tituloURL"
+                class="form-control"
+                id="tituloURL"
+                placeholder="URL"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="fechaEdu"> Fecha</label>
+              <input type="text"
+                ngModel
+                name="fechaEdu"
+                class="form-control"
+                id="fechaEdu"
+                placeholder="Fecha"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="fechaFin"> Fecha fin</label>
+              <input type="text"
+                ngModel
+                name="fechaFin"
+                class="form-control"
+                id="fechaFin"
+                placeholder="FechaFin"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="descEdu"> Descripción</label>
+              <input type="text"
+                ngModel
+                name="descEdu"
+                class="form-control"
+                id="descEdu"
+                placeholder="Descripcion"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="imagenEdu"> Imagen</label>
+              <input type="text"
+                ngModel
+                name="imagenEdu"
+                class="form-control"
+                id="imagenEdu"
+                placeholder="Imagen"
+                required
+              >
+            </div>
+            <div class="modal-footer">
+                <button
+                type="button"
+                id="add-education-form"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                >
+                 cerrar   
+                </button>
+                <button
+                [disabled]="addForm.invalid"
+                type="submit"
+                class="btn btn-primary"
+                >
+                Añadir cambios
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</div>
+
+</div>
+                
+
+<!-- HTML: -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Modal body content
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Trigger button:-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Open Modal
+</button>
+
+
+
+
+
+
+ <!-- Trigger/Open The Modal -->
+ <button id="myBtn">Open Modal</button>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+ 
+   <!-- Modal content -->
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <p>Some text in the Modal..</p>
+   </div>
+ 
+ </div> 
+
+ 

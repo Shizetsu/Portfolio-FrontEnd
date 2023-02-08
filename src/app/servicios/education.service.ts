@@ -21,7 +21,7 @@ export class EducationService {
   public addEducation(education: Education):Observable<Education>{
     return this.http.post<Education>(`${this.apiServerUrl}/education/add`, education);
   }
-  public editEducation(education: Education):Observable<Education>{
+  public updateEducation(education: Education):Observable<Education>{
     return this.http.put<Education>(`${this.apiServerUrl}/education/update`, education);
   }
   public deleteEducation(educationId: number):Observable<void>{
