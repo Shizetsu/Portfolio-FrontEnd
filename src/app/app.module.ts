@@ -16,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { EnglishComponent } from './components/english/english.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AppEditorComponent } from './components/app-editor/app-editor.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -43,6 +45,8 @@ const appRoutes:Routes=[
     FooterComponent,
     HomeComponent,
     EnglishComponent,
+    AppEditorComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
